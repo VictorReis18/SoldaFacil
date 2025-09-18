@@ -38,7 +38,9 @@
             "backgroundColor": "#000000"
           }
         }
-      ]
+      ],
+      "expo-asset",
+      "react-native-file-viewer-turbo"
     ],
     "experiments": {
       "typedRoutes": true,

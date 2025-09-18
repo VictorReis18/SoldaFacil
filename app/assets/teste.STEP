@@ -1,0 +1,84 @@
+import React from "react";
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import * as Sharing from "expo-sharing";
+import { Asset } from "expo-asset";
+
+type FileButtonProps = {
+  label: string;
+  filePath: number; // require() returns a number
+};
+
+const filesToShare: FileButtonProps[] = [
+  { label: "Abrir PDF", filePath: require("../../app/assets/teste.pdf") },
+  { label: "Abrir STEP", filePath: require("../../app/assets/teste.STEP") },
+];
+
+const CalefatoresScreen = () => {
+  const handleOpenFile = async (file: number) => {
+    try {
+      const asset = Asset.fromModule(file);
+      await asset.downloadAsync(); // garante que o arquivo está disponível localmente
+
+      if (!(await Sharing.isAvailableAsync())) {
+        Alert.alert(
+          "Ops!",
+          "Compartilhamento não suportado neste dispositivo."
+        );
+        return;
+      }
+
+      if (!asset.localUri) {
+        throw new Error("O URI local do asset é nulo.");
+      }
+
+      await Sharing.shareAsync(asset.localUri);
+    } catch (error) {
+      console.error(error);
+      Alert.alert("Erro", "Não foi possível abrir o arquivo.");
+    }
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Tela de Calefatores</Text>
+      {filesToShare.map((fileInfo) => (
+        <TouchableOpacity
+          key={fileInfo.label}
+          style={styles.button}
+          onPress={() => handleOpenFile(fileInfo.filePath)}
+        >
+          <Text style={styles.buttonText}>{fileInfo.label}</Text>
+        </TouchableOpacity>
+      ))}
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#2c3e50",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    color: "#fff",
+    marginBottom: 30,
+  },
+  button: {
+    backgroundColor: "#3498db",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginVertical: 10,
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+});
+
+export default CalefatoresScreen;
