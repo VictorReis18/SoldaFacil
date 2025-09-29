@@ -1,18 +1,38 @@
 [
   {
-    "titulo": "peça 000PE00",
-    "url": "https://drive.google.com/file/d/1wBNDM84uF1IEgcxnFIFZUSkRb8Yp7lGn/view?usp=drive_link"
+    "titulo": "Componente de solda: 002648CJ00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002648CJ00.HTML?ref=main"
   },
   {
-    "titulo": "BRASONEIRO",
-    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/FG800-NW-BRASONERO.HTML?ref=2c2beb17dc12cd5a291acb4970091a7d88ca7551"
+    "titulo": "Componente de solda: 002640CJ00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002640CJ00.HTML?ref=main"
   },
 
    {
-    "titulo": "000738PMd00",
-    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/000738PM00.HTML?ref=main"
+    "titulo": "Componente de solda: 002644PM00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002644PM00.HTML?ref=main"
+  },
+  
+  {
+    "titulo": "Componente de solda: 002645PM00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002645PM00.HTML?ref=main"
+  },
+  {
+    "titulo": "Componente de solda: 002644PM00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002644PM00.HTML?ref=main"
+  },
+  {
+    "titulo": "Componente de solda: 002646PM00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002646PM00.HTML?ref=main"
+  },
+
+  {
+    "titulo": "Componente de solda: 002647PM00",
+    "url": "https://api.github.com/repos/VictorReis18/SoldaFacil-files/contents/002647PM00.HTML?ref=main"
   }
+
 ]
+
 
 
 
