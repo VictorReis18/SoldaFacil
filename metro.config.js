@@ -7,6 +7,7 @@ config.resolver.assetExts = [
   ...config.resolver.assetExts, // mantém os padrões
   "STEP", // adicione sua extensão custom
   "pdf",
+  "SLDASM",
 ];
 
 module.exports = config;
